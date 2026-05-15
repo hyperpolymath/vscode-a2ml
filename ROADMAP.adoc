@@ -16,8 +16,11 @@ Extension work is in pre-publication state.
 * [x] PNG icon generated (Marketplace rejects SVG icons)
 * [x] Automated `Marketplace Publish` workflow (tag-triggered, VS Code + Open VSX)
 * [x] Publishing runbook: link:docs/PUBLISHING.adoc[docs/PUBLISHING.adoc]
-* [ ] Acquire Azure DevOps Marketplace PAT for publisher account (human step)
-* [ ] Add `VSCE_PAT` repository secret, then push a `v*` tag to publish
+* [x] Entra ID + GitHub OIDC auth (no stored PAT for Marketplace)
+* [ ] One-time Entra setup: app registration + federated credential +
+  grant publisher rights (human step)
+* [ ] Set `AZURE_CLIENT_ID` / `AZURE_TENANT_ID` repo variables, then push
+  a `v*` tag to publish
 
 === v1.0.0 - Stable Release
 * [ ] Full feature set
