@@ -1,0 +1,72 @@
+// SPDX-License-Identifier: PMPL-1.0-or-later
+= Publishing vscode-a2ml
+:toc: preamble
+:icons: font
+
+How this extension gets "online" — i.e. installable from a marketplace.
+
+== The one step only a human can do
+
+Publishing requires an *Azure DevOps Personal Access Token (PAT)* bound to
+the `hyperpolymath` Marketplace publisher. This is a credential that must be
+generated interactively while signed into the Microsoft/Azure account that
+owns the publisher. No automation (CI or otherwise) can create it. This is
+the single blocker that has kept issue #1 open.
+
+=== Create the PAT (5 minutes, once)
+
+. Sign in at https://dev.azure.com with the account that owns the
+  `hyperpolymath` Marketplace publisher.
+. Top-right avatar → *Personal access tokens* → *New Token*.
+. Organization: *All accessible organizations*.
+. Scopes: *Custom defined* → expand *Marketplace* → tick *Manage*.
+. Create, then *copy the token now* (it is shown only once).
+
+If the `hyperpolymath` publisher does not yet exist, create it once at
+https://marketplace.visualstudio.com/manage/publishers/ (publisher ID must
+equal the `publisher` field in `package.json`).
+
+== Automated path (recommended)
+
+. In GitHub: *Settings → Secrets and variables → Actions → New repository
+  secret*.
+. Add `VSCE_PAT` = the token from above.
+. (Optional, open-source registry) add `OVSX_PAT` from
+  https://open-vsx.org → Settings → Access Tokens.
+. Bump `version` in `package.json`, commit, then tag and push:
++
+[source,bash]
+----
+git tag v0.1.0
+git push origin v0.1.0
+----
+
+The `Marketplace Publish` workflow packages a `.vsix` and publishes to the
+VS Code Marketplace (and Open VSX if `OVSX_PAT` is set). Registries without
+a configured token are skipped, not failed. The workflow can also be run
+manually via *Actions → Marketplace Publish → Run workflow*.
+
+== Manual one-off path (no CI)
+
+Requires Deno (the repo's standard toolchain; npm/bun are blocked).
+
+[source,bash]
+----
+export VSCE_PAT=...   # the Azure DevOps PAT
+deno run -A --node-modules-dir=auto npm:@vscode/vsce@3.2.1 package
+deno run -A --node-modules-dir=auto npm:@vscode/vsce@3.2.1 \
+  publish --packagePath ./*.vsix --pat "$VSCE_PAT"
+----
+
+== Verifying it is online
+
+* VS Code Marketplace:
+  https://marketplace.visualstudio.com/items?itemName=hyperpolymath.vscode-a2ml
+* Inside VS Code: `ext install hyperpolymath.vscode-a2ml`
+* Open VSX (if published): https://open-vsx.org/extension/hyperpolymath/vscode-a2ml
+
+== Note: GitHub Pages is a different "online"
+
+The `GitHub Pages` workflow (`casket-pages.yml`) publishes a documentation
+*site*, not the installable extension. Marketplace publication is what makes
+the extension usable; the two are independent.
