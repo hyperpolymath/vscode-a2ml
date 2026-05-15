@@ -13,9 +13,11 @@ Extension work is in pre-publication state.
 * [ ] CI/CD baseline
 
 === v0.1.1 - Marketplace Publication
-* [ ] Acquire Azure DevOps Marketplace PAT for publisher account
-* [ ] Run `vsce package` and final metadata verification
-* [ ] Publish with `vsce publish`
+* [x] PNG icon generated (Marketplace rejects SVG icons)
+* [x] Automated `Marketplace Publish` workflow (tag-triggered, VS Code + Open VSX)
+* [x] Publishing runbook: link:docs/PUBLISHING.adoc[docs/PUBLISHING.adoc]
+* [ ] Acquire Azure DevOps Marketplace PAT for publisher account (human step)
+* [ ] Add `VSCE_PAT` repository secret, then push a `v*` tag to publish
 
 === v1.0.0 - Stable Release
 * [ ] Full feature set
