@@ -2,7 +2,7 @@
   "A2ML SPDX Header": {
     "prefix": "spdx",
     "body": [
-      "# SPDX-License-Identifier: ${1:PMPL-1.0-or-later}",
+      "# SPDX-License-Identifier: ${1:MPL-2.0}",
       "# Copyright (c) ${2:2026} ${3:Jonathan D.A. Jewell} (${4:hyperpolymath})",
       ""
     ],
@@ -11,7 +11,7 @@
   "A2ML Manifest": {
     "prefix": "manifest",
     "body": [
-      "# SPDX-License-Identifier: PMPL-1.0-or-later",
+      "# SPDX-License-Identifier: MPL-2.0",
       "# AI Manifest for ${1:project-name}",
       "---",
       "format: a2ml",

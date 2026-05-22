@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: PMPL-1.0-or-later
+# SPDX-License-Identifier: MPL-2.0
 # Everything is excluded by default; only the allow-listed runtime assets
 # below are shipped in the published .vsix.
 **

@@ -3,7 +3,7 @@
 :icons: font
 
 // SPDX-License-Identifier: MPL-2.0
-// (PMPL-1.0-or-later preferred; MPL-2.0 required for VS Code marketplace)
+// (MPL-2.0 preferred; MPL-2.0 required for VS Code marketplace)
 
 == Overview
 
@@ -108,7 +108,7 @@ code --install-extension vscode-a2ml-0.1.0.vsix
 
 SPDX-License-Identifier: MPL-2.0
 
-(PMPL-1.0-or-later preferred; MPL-2.0 required for VS Code marketplace)
+(MPL-2.0 preferred; MPL-2.0 required for VS Code marketplace)
 
 See link:LICENSE[LICENSE] for the full MPL-2.0 text.
-See link:LICENSE-PMPL[LICENSE-PMPL] for the PMPL-1.0-or-later text.
+See link:LICENSE-PMPL[LICENSE-PMPL] for the MPL-2.0 text.
