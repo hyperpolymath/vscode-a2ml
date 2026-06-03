@@ -1,8 +1,13 @@
+// SPDX-License-Identifier: MPL-2.0
+// Copyright (c) Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
 = vscode-a2ml
+image:https://img.shields.io/badge/OpenSSF-Best_Practices-green?logo=openssourcesecurity[OpenSSF Best Practices,link="https://www.bestpractices.dev/en/projects/new?repo_url=https://github.com/hyperpolymath/vscode-a2ml"]
+
+image:https://img.shields.io/badge/License-MPL_2.0-blue.svg[License: MPL-2.0,link="https://opensource.org/licenses/MPL-2.0"]
+
 :toc: preamble
 :icons: font
 
-// SPDX-License-Identifier: MPL-2.0
 // (MPL-2.0 preferred; MPL-2.0 required for VS Code marketplace)
 
 == Overview
@@ -106,9 +111,6 @@ code --install-extension vscode-a2ml-0.1.0.vsix
 
 == License
 
+This project is licensed under the Mozilla Public License, v. 2.0. See the `LICENSE` file for details.
+
 SPDX-License-Identifier: MPL-2.0
-
-(MPL-2.0 preferred; MPL-2.0 required for VS Code marketplace)
-
-See link:LICENSE[LICENSE] for the full MPL-2.0 text.
-See link:LICENSE-PMPL[LICENSE-PMPL] for the MPL-2.0 text.
