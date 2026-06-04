@@ -41,6 +41,7 @@ jobs:
   publish:
     name: Package and Publish
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: read
       id-token: write  # required to mint the GitHub OIDC token for Entra

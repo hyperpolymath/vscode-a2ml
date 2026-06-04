@@ -1,3 +1,7 @@
+<!--
+SPDX-License-Identifier: MPL-2.0
+Copyright (c) Jonathan D.A. Jewell <j.d.a.jewell@open.ac.uk>
+-->
 # POST-audit status report
 Repo: vscode-a2ml
 Actions taken:
@@ -12,10 +16,10 @@ Remaining findings: {
   "weak_points": [
     {
       "category": "UncheckedError",
-      "location": ".machine_readable/contractiles/k9/template-hunt.k9.ncl",
-      "file": ".machine_readable/contractiles/k9/template-hunt.k9.ncl",
+      "location": ".machine_readable/contractiles/self-validating/template-hunt.k9.ncl",
+      "file": ".machine_readable/contractiles/self-validating/template-hunt.k9.ncl",
       "severity": "Low",
-      "description": "14 TODO/FIXME/HACK markers in .machine_readable/contractiles/k9/template-hunt.k9.ncl",
+      "description": "14 TODO/FIXME/HACK markers in .machine_readable/contractiles/self-validating/template-hunt.k9.ncl",
       "recommended_attack": [
         "cpu"
       ]
@@ -100,7 +104,7 @@ Remaining findings: {
         "sink_axis": "cpu",
         "severity_value": 1.0,
         "files": [
-          ".machine_readable/contractiles/k9/template-hunt.k9.ncl"
+          ".machine_readable/contractiles/self-validating/template-hunt.k9.ncl"
         ],
         "frameworks": [],
         "relation": "UncheckedError->Cpu"
