@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MPL-2.0
+// SPDX-License-Identifier: CC-BY-SA-4.0
 // Template: QUICKSTART-USER.adoc — 5-minute path to working software
 // Replace vscode-a2ml, Vscode A2Ml — See README.adoc for details., just run, Vscode A2Ml started successfully. with actuals
 = vscode-a2ml — Quick Start for Users
